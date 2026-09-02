@@ -4,3 +4,10 @@ export class UserAlReadyExistsException extends Error {
     this.name = 'UserAlReadyExistsException';
   }
 }
+
+export class UserNotFoundException extends Error {
+  constructor(id: string) {
+    super(`Utilisateur avec l'id ${id} est introuvable`);
+    this.name = 'UserNotFoundException';
+  }
+}
